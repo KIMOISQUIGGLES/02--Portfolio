@@ -30,6 +30,7 @@ h1 {
     text-align: center;
 }
 
+/* makes my My heading elements stay on the left-hand side of the screen */
 h1, h2, h3 {
     display: inline-block;
     padding-top: 10px;
@@ -54,7 +55,7 @@ main h1, footer h1 {
     min-width: 300px;
 }
 
-/* makes my things glow when I hover */
+/* makes my things glow when I hover over them */
 h1:hover, h2:hover, h3:hover, nav:hover, #aboutme p:hover, .project:hover, .project p:hover, .project h3:hover .project img:hover {
     color: #fff;
     text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
@@ -105,6 +106,8 @@ header ul li {
 
 .subheader h2 {
     font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 main {
@@ -162,8 +165,8 @@ main {
 }
 
 #showcase img {
-    width: 800px;
-    height: 800px;
+    width: 1000px;
+    height: 1000px;
 }
 
 .project {
@@ -272,4 +275,103 @@ footer ul li {
     padding-right: 20px;
     list-style-type: none;
     border-bottom: 5px;
+}
+
+/*changes header so Title and nav bar don't overlap when the screen shrinks
+
+changes project cards so h3 and p don't overlap when the screen shrinks*/
+@media screen and (max-width: 1258px) {
+    
+    header h1 {
+        width: 50%;
+    }
+
+    .project h3 {
+        font-size: 25px;
+        height: 60px;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: 10px;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        margin: 0;
+        padding:0;
+        width: 100%;
+    }
+
+    header{
+        display: block;
+    }
+
+    header h1 {
+        width: 60%;
+    }
+
+    /* changes nav bar to display vertically (clear up space) */
+    header ul li {
+        display: table-row;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    /* arranges all of my elements vertically for better readability */
+    header, #aboutme, #work, footer {
+        flex-direction: column;
+    }
+
+    /* makes my main card take the full width of the screen */
+    #showcase {
+        width: 90%
+    }
+
+    /* arranges other project cards in rows of 2 */
+    .project {
+        width: 48%;
+    }
+
+    .project p {
+        font-size: 10px;
+    }
+
+    footer ul li {
+        display: table-row;
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    footer li {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    /* changes each project card to take up the full width of the screen */
+    .workbody {
+        display: flex;
+        flex-direction: column;
+        width: 90%
+    }
+
+    #showcase {
+        width: 90%
+    }
+    
+    .project {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .project p {
+        font-size: 7px;
+    }
+
 }
