@@ -365,6 +365,11 @@ changes project cards so h3 and p don't overlap when the screen shrinks*/
     #showcase {
         width: 90%
     }
+
+    #showcase img {
+        width: 500px;
+        height: 500px;
+    }
     
     .project {
         width: 90%;
