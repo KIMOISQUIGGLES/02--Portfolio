@@ -73,6 +73,10 @@ You will be employer-ready if you are able to:
 
 * Resolve a merge conflict that results from a `git pull`.
 
+## Mock-Up
+
+<img src="./assets/images/Untitled-2022-03-26-2040.PNG">
+
 ## My Page
 
 My webpage contains a responsive design using Media Queries, allowing it to be accessed on multiple devices: 
